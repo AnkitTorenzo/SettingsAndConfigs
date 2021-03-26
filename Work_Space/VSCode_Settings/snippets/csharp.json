@@ -1,0 +1,51 @@
+{
+	// Place your snippets for csharp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "logd",
+		"body": [
+			"Debug.Log($\"$1\");",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"Print Error to console": {
+		"prefix": "loge",
+		"body": [
+			"Debug.LogError($\"$1\");",
+			"$2"
+		],
+		"description": "Log Error to console"
+	},
+	"Create Event": {
+		"prefix": "eventdecal",
+		"body": [
+			"public void $0(SocketIOAckCallback action)",
+			"{",
+			"\tJSON_Object json = new JSON_Object();",
+			"\tDebug.Log($\"$0: {json.toString()}\");\n",
+			"\tUIManager.Instance.socketManager.Socket.Emit(\"$0\", action, Json.Decode(json.toString()));",
+			"}"
+		],
+		"description": "Create a method to call Node.js Socket.io event"
+	},
+	"Create A Response For an Event": {
+		"prefix": "response",
+		"body": [
+			"private void Call$0()",
+			"{",
+			"\tUIManager.Instance.DisplayLoader(ResponseOf$0);",
+			"\tSocketAPIManager.Instance.$0();",
+			"}",
+			"private void ResponseOf$0(Socket socket, Packet packet, object[] args)",
+			"{",
+			"\tUIManager.Instance.HideLoader();",
+			"\tDebug.Log($\"$0 Response: {packet}\");",
+			"}"
+		],
+		"description": "Create a methods to get response from Event"
+	}
+}
