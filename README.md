@@ -1,4 +1,4 @@
-#SettingsAndConfigs
+# SettingsAndConfigs
 
 This repo is created to keep my personal settings and configuration at easy to find palce.
 
