@@ -5,4 +5,4 @@ This directory contains all of my vs code's settings that I like and my custom s
 ###
 
 Just pest this folder to the following path to make your settings and snippet as mine.
-`Path: C:\Users\ankitb\AppData\Roaming\Code\User`
+`Path: C:\Users\<Your User Name>\AppData\Roaming\Code\User`
